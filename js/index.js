@@ -36,3 +36,13 @@ form.addEventListener("submit", (event) => {
   // eslint-disable-next-line no-alert
   // alert("Form submitted");
 });
+
+form.addEventListener("input", (event) => {
+  event.preventDefault();
+
+  if (tosCheckbox.checked) {
+    hideTosError();
+  } else {
+    showTosError();
+  }
+});
